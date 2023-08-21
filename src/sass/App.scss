@@ -1,0 +1,105 @@
+:root {
+	//// COLORS ////
+
+	//Primary
+	--color-primary-veryDark: #090b1a; // main background
+	--color-primary-dark: #1b1938; // card background
+	--color-primary-soft: rgb(170, 92, 219); // accent
+
+	//Neutral
+	--color-white: #ffffff; //main heading, stats
+	--color-white-transparent: #ffffffbf; //main paragraph
+	--color-white-transparent-secondary: #ffffff99; //stat headings
+
+	//// FONTS ////
+	--font-primary: 'Inter', sans-serif;
+	--font-secondary: 'Lexend Deca', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%; // 1rem = 10px
+}
+body,
+body *,
+body *::after,
+body *::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-primary);
+	color: var(--color-white-transparent);
+	font-size: 1.5rem;
+	background-color: var(--color-primary-veryDark);
+	padding: 8.8rem 2.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	display: grid;
+	justify-content: center;
+
+	border-radius: 0.8rem;
+
+	max-width: 32.7rem;
+	background-color: var(--color-primary-dark);
+	overflow: hidden;
+
+	&__img {
+		width: 32.7rem;
+		height: 24rem;
+		background-image: linear-gradient(
+				rgba(170, 92, 219, 0.5),
+				(rgba(170, 92, 219, 0.5))
+			),
+			url(../img/image-header-mobile.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.content {
+		color: var(--color-white-transparent);
+		text-align: center;
+		padding: 3rem 3.4rem;
+
+		&__heading {
+			color: var(--color-white);
+			font-size: 2.8rem;
+			font-weight: 700;
+			margin-bottom: 2.4rem;
+			span {
+				color: var(--color-primary-soft);
+			}
+		}
+
+		&__description {
+			font-size: 1.5rem;
+			line-height: 1.7;
+			margin-bottom: 3.5rem;
+		}
+	}
+	.list {
+		list-style: none;
+		display: grid;
+		grid-row-gap: 2.5rem;
+
+		&__item-head {
+			font-size: 2.4rem;
+			font-weight: 700;
+			color: var(--color-white);
+		}
+		&__item-description {
+			font-family: var(--font-secondary);
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			color: var(--color-white-transparent-secondary);
+			line-height: 2;
+			letter-spacing: 1px;
+		}
+	}
+}
