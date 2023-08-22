@@ -3,6 +3,7 @@ function Card({ children }) {
 		<main className='card'>
 			<div
 				role='img'
+				alt='Women sitting at a desk and working on a computer'
 				className='card__img'
 			></div>
 
